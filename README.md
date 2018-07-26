@@ -1,2 +1,125 @@
 # Looppack-Microgateway
 Using Loopback with Microgateway
+
+# microgateway-demo-assets
+ -   git clone https://github.com/Kalumburu/microgateway-demo-assets.git
+ -   cd microgateway-demo-assets/
+ -   cd catapi/
+ -   npm install --save
+ -  cd node_modules/swagger-client/
+ -  npm install babel-runtime
+ -  cd ..
+ -  node server/server.js
+ -  apic loopback:refresh
+ -  apic
+ -  apic --version
+ -  apic edit
+ -  ll .apiconnect/
+ -  ll definitions/
+ -  ll .apiconnect/
+ -  ll .apiconnect/config 
+ -  cat .apiconnect/config 
+ -  apic edit
+ -  mkdir policies
+ -  mkdir policies/removesenstive
+ -  gedit policies/removesenstive/package.json
+ -  gedit policies/removesenstive/policy.yaml
+ -  gedit policies/removesenstive/index.js
+ -  gedit .apiconnect/config
+ -  apic edit
+ -  cd policies/
+ -  mv removesenstive/ removesensitive
+ -  cd ..
+ -  apic edit
+ -  ll definitions/
+ -  apic start
+ -  apic 
+ -  apic logs
+ -  apic services
+ -  apic props
+ -  apic edit
+ -  ll definitions/
+ -  ll node_modules/
+ -  ll .apiconnect/
+ -  ll .apiconnect/ll server/
+ -  apic
+ -  cd ..
+ -  ll
+ -  cd catapi/
+ 
+# microgateway
+ -  git clone https://github.com/Kalumburu/microgateway.git
+ -  cd microgateway/
+ -  npm install
+ -  gedit sample.js
+ -  mkdir definitions
+ -  mkdir definitions/myapp
+ -  gedit definitions/myapp/sample_1.0.0.yaml
+ -  node sample.js
+ -  docker stack deploy -c docker-compose.yaml microgateway
+ -  vi docker-compose.yaml 
+ -  docker stack deploy -c docker-compose.yaml microgateway
+ -  docker-compose -f docker-compose.yaml
+ -  docker-compose -f docker-compose.yaml start
+ -  service docker start
+ -  service docker stop
+ -  service docker status
+ -  service docker start
+ -  ps -ef | grep docker
+ -  docker
+ -  docker start
+ -  cd microgateway
+ -  cd definitions/myapp/
+ -  cat .datastore 
+ -  cd ..
+ -  docker-compose -f docker-compose.yaml 
+ -  docker-compose -f docker-compose.yaml microgateway
+ -  docker -f docker-compose.yaml microgateway
+ -  docker-compose up -d
+ -  sudo docker-compose up -d
+ -  docker service ls
+ -  sudo docker service ls
+ -  sudo docker -a
+ -  sudo docker service
+ -  sudo docker service ps
+ -  sudo docker service ps -a
+ -  docker-compose ps
+ -  sudo docker-compose ps
+ -  sudo docker-compose stop && docker-compose rm -v
+ -  sudo docker-compose ps
+ -  sudo docker-compose rm -v
+ -  sudo docker-compose ps
+
+# Testing
+ -  curl -X GET http://localhost:4002/api/cats
+ -  curl -X GET http://localhost:4001/api/cats
+ -  curl -X GET http://localhost:4002/api/cats
+ -  curl -X GET -H "Content-Type: application/json" http://localhost:4002/api/cats
+ -  curl -X GET -H "Accept: application/json" http://localhost:4002/api/cats
+ -  curl -X GET -H "Accept: application/json" -H "X-IBM-Client-Id: default" -H "X-IBM-Client-Secret: SECRET" http://localhost:4002/api/cats
+ -  curl -X GET http://localhost:4002/api/cats
+ -  curl -X GET http://localhost:4001/api/cats
+ -  curl -X GET -H "Accept: application/json" -H "X-IBM-Client-Id: default" -H "X-IBM-Client-Secret: SECRET" http://localhost:4002/api/cats
+ -  curl -X GET -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" -H "Accept-Encoding: gzip, deflate, br" -H "Accept-Language: en-US,en;q=0.5" -H "Cache-Control: no-cache" -H "Connection: keep-alive" -H "Host: 127.0.0.1:4002" -H "Pragma: no-cache" -H "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0" http://localhost:4002/api/cats
+ -  curl -X GET -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" -H "Accept-Encoding: gzip, deflate, br" -H "Accept-Language: en-US,en;q=0.5" -H "Cache-Control: no-cache" -H "Connection: keep-alive" -H "Host: 127.0.0.1:4002" -H "Pragma: no-cache" -H "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0" https://localhost:4002/api/cats
+ -  curl -k -X GET -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" -H "Accept-Encoding: gzip, deflate, br" -H "Accept-Language: en-US,en;q=0.5" -H "Cache-Control: no-cache" -H "Connection: keep-alive" -H "Host: 127.0.0.1:4002" -H "Pragma: no-cache" -H "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0" https://localhost:4002/api/cats
+ -  curl -k -X GET -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" -H "Accept-Encoding: gzip, deflate, br" -H "Accept-Language: en-US,en;q=0.5" -H "Cache-Control: no-cache" -H "Connection: keep-alive" -H "Host: 127.0.0.1:4002" -H "Pragma: no-cache" -H https://localhost:4002/api/cats
+ -  curl -k -X GET -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" -H "Accept-Encoding: gzip, deflate, br" -H "Accept-Language: en-US,en;q=0.5" -H "Cache-Control: no-cache" -H "Connection: keep-alive" -H "Host: 127.0.0.1:4002" -H "Pragma: no-cache" https://localhost:4002/api/cats
+ -  curl -k -X GET -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" -H "Accept-Encoding: gzip, deflate, br" -H "Accept-Language: en-US,en;q=0.5" -H "Cache-Control: no-cache" -H "Connection: keep-alive" https://localhost:4002/api/cats
+ -  curl -k -X GET -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" -H "Accept-Encoding: gzip, deflate, br" -H "Accept-Language: en-US,en;q=0.5" https://localhost:4002/api/cats
+ -  curl -X GET http://localhost:4001/api/cats
+ -  curl -X GET http://localhost:4002/api/cats
+ -  curl -X GET https://localhost:4002/api/cats
+ -  curl -k -X GET https://localhost:4002/api/cats
+ -  curl -k -X GET https://127.0.0.1:4002/api/cats
+ -  curl -k -X GET https://localhost:4002/api/cats
+ -  curl -k -X GET https://localhost:4002
+ -  curl -k -X GET -H "Accept: application/json" -H "X-IBM-Client-Id: default" -H "X-IBM-Client-Secret: SECRET" https://localhost:4002/api/cats
+ -  curl -k -X GET -H "X-IBM-Client-Id: default" -H "X-IBM-Client-Secret: SECRET" https://localhost:4002/api/cats
+ -  curl -X GET http://localhost:4001/api/cats
+ -  curl -k -X GET -H "X-IBM-Client-Id: default" -H "X-IBM-Client-Secret: SECRET" https://localhost:4002/api/cats
+ -  curl http://localhost:3000/sample/echo
+ -  curl http://localhost:443/sample/echo
+ -  curl https://localhost:443/sample/echo
+ -  curl -k https://localhost:443/sample/echo
+ -  curl -k https://localhost/sample/echo
